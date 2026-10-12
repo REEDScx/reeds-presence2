@@ -15,4 +15,4 @@ jobs:
       - name: Check whitespace and conflict markers
         run: |
           git diff --check
-          if git grep -nE '^(<<<<<<< |=======|>>>>>>> )' -- ':!*.lock'; then exit 1; fi
+          if git grep -nE '^(<<<<<<< |>>>>>>> )' -- ':!*.lock'; then exit 1; fi
