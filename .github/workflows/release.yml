@@ -1,0 +1,12 @@
+# Publishing signed APKs is performed by the authorized private build pipeline.
+# This workflow deliberately does not sign, build or publish releases.
+name: Release policy
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  guidance:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Publish signed APKs and checksums from the private authorized pipeline.'

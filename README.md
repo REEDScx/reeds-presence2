@@ -1,24 +1,21 @@
-# REEDS Presence — Atualizações oficiais
+# REEDS Presence
 
-Este repositório **público** é o canal de distribuição de atualizações do aplicativo Android REEDS Presence. O **código-fonte original continua privado**.
+Canal **público oficial de distribuição** do aplicativo Android REEDS Presence. O código-fonte do aplicativo permanece no repositório **privado** `REEDScx/reeds-precense`.
 
-## Baixar atualizações
+## Instalação e atualizações
 
-As versões serão publicadas em [Releases](https://github.com/REEDScx/reeds-presence2/releases) com:
-- `REEDSPresence-v*-assinado.apk` — APK Android assinado;
-- `SHA256SUMS.txt` — soma SHA-256 do arquivo;
-- `latest.json` — metadados da versão, hash e URLs oficiais.
+Baixe versões oficiais em [GitHub Releases](https://github.com/REEDScx/reeds-presence2/releases). Os releases podem conter APK assinado, `SHA256SUMS.txt` e metadados `latest.json`. A instalação depende de confirmação do Android; não há instalação silenciosa. Verifique a origem, a assinatura e o hash antes de instalar.
 
-O aplicativo pode consultar periodicamente o arquivo [latest.json](https://raw.githubusercontent.com/REEDScx/reeds-presence2/main/latest.json) **após o primeiro Release sincronizado**. O download precisa de consentimento e a instalação deve ser confirmada no Android. Não existe instalação silenciosa.
+## Contribua
 
-## Segurança e privacidade
+Aceitamos issues de bugs, propostas de recursos, correções de documentação, templates e melhorias na distribuição pública. Consulte [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) e [SUPPORT.md](SUPPORT.md). O código Android privado não é aceito neste repositório.
 
-- Pacote Android: `com.reeds.presence`.
-- O APK é verificado por identificador do pacote, `versionCode`, assinatura digital e SHA-256 antes da instalação.
-- Este repositório **não deve receber** código-fonte privado, AAR proprietário do SDK Discord, keystore, senhas, tokens de usuário ou segredos do GitHub.
-- As versões podem permanecer identificadas como **Beta** enquanto não houver testes em aparelhos reais.
-- A publicação é automatizada a partir do pipeline de compilação do aplicativo privado, quando a credencial de escrita de escopo mínimo estiver configurada.
+## Documentação
 
-## Limites
+[Instalação](docs/INSTALLATION.md) · [Configuração](docs/CONFIGURATION.md) · [Arquitetura](docs/ARCHITECTURE.md) · [Desenvolvimento](docs/DEVELOPMENT.md) · [API de atualização](docs/API.md) · [Publicação](docs/DEPLOYMENT.md) · [Testes](docs/TESTING.md) · [FAQ](docs/FAQ.md) · [Roadmap](docs/ROADMAP.md)
 
-A Rich Presence usa o SDK oficial do Discord. Uma resposta de sucesso do SDK não garante visibilidade remota para outros usuários.
+## Segurança, licenças e direitos
+
+Consulte [SECURITY.md](SECURITY.md), [LICENSE](LICENSE) e [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). A licença deste repositório cobre somente o conteúdo sobre o qual o titular possui direitos e que é disponibilizado sob seus termos; **não concede licença para o código Android privado, SDKs proprietários, marcas ou APKs distribuídos**. O pacote Android é `com.reeds.presence`.
+
+Não publique tokens, credenciais, keystores, arquivos de assinatura, dados pessoais, SDKs proprietários ou código-fonte privado. Reporte falhas de segurança por canal privado.

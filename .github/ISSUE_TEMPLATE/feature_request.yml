@@ -1,0 +1,14 @@
+name: Sugerir melhoria
+description: Propor melhorias para o aplicativo ou sua distribuição
+title: '[Feature] '
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposta
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Motivação e benefícios

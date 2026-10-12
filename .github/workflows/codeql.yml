@@ -1,0 +1,12 @@
+# CodeQL analysis belongs in the private Android source repository.
+# This distribution repository has no supported application source to analyze.
+name: CodeQL applicability
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  notice:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Configure CodeQL for Kotlin/Java in the private source repository.'
