@@ -1,0 +1,22 @@
+name: Validate public metadata
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON metadata when present
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          p=pathlib.Path('latest.json')
+          if p.exists():
+              value=json.loads(p.read_text(encoding='utf-8'))
+              assert isinstance(value,dict), 'latest.json must be an object'
+          print('Metadata validated')
+          PY
