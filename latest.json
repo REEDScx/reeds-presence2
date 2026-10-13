@@ -1,1 +1,9 @@
-{"format":"reeds-presence-release-v1","versionName":"0.16.185.1","versionCode":318501,"sha256":"57fa23da9f832602b6aceb042bfa8aa94ebb48dc438cdfd1d02ba6597326ea8a","releaseUrl":"https://github.com/REEDScx/reeds-presence2/releases/tag/v0.16.185.1","apkUrl":"https://github.com/REEDScx/reeds-presence2/releases/download/v0.16.185.1/REEDSPresence-v0.16.185.1-assinado.apk","notes":"APK assinado REEDS Presence. Download autorizado pelo usuário; instalação confirmada no Android."}
+{
+  "format": "reeds-presence-release-v1",
+  "versionName": "0.16.185.1",
+  "versionCode": 318501,
+  "sha256": "57fa23da9f832602b6aceb042bfa8aa94ebb48dc438cdfd1d02ba6597326ea8a",
+  "releaseUrl": "https://github.com/REEDScx/reeds-presence2/releases/tag/v0.16.185.1",
+  "apkUrl": "https://github.com/REEDScx/reeds-presence2/releases/download/v0.16.185.1/REEDSPresence-v0.16.185.1-assinado.apk",
+  "notes": "Lançamento oficial por APK. Imagens por URL HTTPS, consentimento para detecção e atualizações verificadas. Consulte as notas e limitações antes de instalar."
+}
