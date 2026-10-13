@@ -1,0 +1,34 @@
+name: Publish verified stable release
+on:
+  push:
+    branches: [main]
+    paths: ['releases/stable.json']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: stable-release
+  cancel-in-progress: false
+jobs:
+  promote:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install APK verification tools
+        run: '"$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "build-tools;35.0.0"'
+      - name: Verify promotion guards
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Verify signed APK and promote stable feed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/promote_stable.py
